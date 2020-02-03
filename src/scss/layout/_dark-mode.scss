@@ -1,0 +1,48 @@
+.header.dm-active {
+  background: $dm-background;
+}
+
+.main-content.dm-active {
+  background: $dm-background-light;
+
+  .card {
+    background: $dm-background;
+    color: #eee;
+
+    .card-info__title {
+      color: $dm-title;
+    }
+  }
+
+  .add-payment-form {
+    input,
+    select {
+      background: transparent;
+      border-color: #ddd;
+      color: #eee;
+
+      &:focus {
+        border-color: #fff;
+      }
+    }
+
+    input[type="submit"] {
+      background: #ddd;
+      color: #333;
+    }
+  }
+
+  .cost-toolbar {
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .cost__title {
+    color: $dm-title;
+  }
+
+  .cost__category {
+    color: #fff;
+  }
+}

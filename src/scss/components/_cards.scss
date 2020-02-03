@@ -1,0 +1,133 @@
+.card {
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(#000, 0.05);
+  background: #fff;
+  transition: background ease 0.3s;
+}
+
+.card-info__title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 400;
+  color: $main-blue;
+  transition: color ease 0.3s;
+}
+
+// Cost Cards
+
+.card-cost {
+  min-height: 200px;
+  margin-bottom: 30px;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.cost__title {
+  margin-bottom: 1rem;
+  font-size: 40px;
+  color: #272727;
+}
+
+.cost__category {
+  font-size: 1.25rem;
+
+  &.bills {
+    color: $main-gold;
+  }
+
+  &.insurance {
+    color: $main-blue;
+  }
+
+  &.other {
+    color: $main-green;
+  }
+}
+
+.cost__value {
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+  color: $main-red;
+  font-size: 40px;
+}
+
+.cost__btns {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: red;
+  display: flex;
+  font-size: 20px;
+
+  .cost__edit,
+  .cost__delete {
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .cost__edit {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background: url("../images/edit-icon.svg") no-repeat;
+    position: relative;
+  }
+
+  .cost__delete {
+    height: 20px;
+    width: 20px;
+    .line {
+      background: $main-red;
+      height: 3px;
+      width: 20px;
+      position: absolute;
+      top: calc(50% - 1.5px);
+      right: 0;
+      transform: rotate(-45deg);
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.cost-edit-group {
+  .income-input,
+  .accept,
+  .cancel {
+    width: 20px;
+    height: 20px;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .income-input {
+    height: 30px;
+    width: 100px;
+  }
+}
+
+// Grid View
+
+.cost-container.cost-container--grid {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card {
+    width: 32%;
+    color: red;
+
+    &:not(:nth-of-type(3n + 3)) {
+      margin-right: 2%;
+    }
+
+    .cost__title,
+    .cost__value {
+      font-size: 28px;
+    }
+  }
+}
