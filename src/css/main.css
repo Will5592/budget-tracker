@@ -382,23 +382,15 @@ body {
     position: relative; }
   .cost__btns .cost__delete {
     height: 20px;
-    width: 20px; }
-    .cost__btns .cost__delete .line {
-      background: #ff4a3d;
-      height: 3px;
-      width: 20px;
-      position: absolute;
-      top: calc(50% - 1.5px);
-      right: 0;
-      transform: rotate(-45deg); }
-      .cost__btns .cost__delete .line:first-child {
-        transform: rotate(45deg); }
+    width: 20px;
+    background: url("../images/bin-icon.svg") no-repeat; }
 
 .cost-edit-group .income-input,
 .cost-edit-group .accept,
 .cost-edit-group .cancel {
   width: 20px;
   height: 20px;
+  padding: 5px;
   top: 1rem;
   right: 1.5rem; }
 .cost-edit-group .income-input {

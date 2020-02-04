@@ -4,4 +4,5 @@ export const ADD_COST = "ADD_COST";
 export const UPDATE_BALANCE = "UPDATE_BALANCE";
 export const TOGGLE_INCOME_EDIT = "TOGGLE_INCOME_EDIT";
 export const INCOME_UPDATE = "INCOME_UPDATE";
-export const TOGGLE_COST_EDIT = "TOGGLE_COST_EDIT";
+export const EDIT_COST_TOGGLE = "EDIT_COST_TOGGLE";
+export const COST_UPDATE = "COST_UPDATE";

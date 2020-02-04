@@ -1,13 +1,11 @@
 export default (state, action) => {
   switch (action.type) {
     case "ADD_COST":
-      console.log(action.payload.id);
       return {
         ...state,
         costs: [...state.costs, action.payload]
       };
     case "DELETE_COST":
-      console.log(state);
       return {
         ...state,
         costs: state.costs.filter(cost => cost.id !== action.payload)
@@ -28,11 +26,27 @@ export default (state, action) => {
         ...state,
         income: action.payload
       };
-    case "TOGGLE_COST_EDIT":
+    case "EDIT_COST_TOGGLE":
       return {
         ...state,
-        editCost: !state.editCost
+        costs: state.costs.map(cost =>
+          cost.id === action.payload
+            ? { ...cost, editState: !cost.editState }
+            : cost
+        )
       };
+
+    case "COST_UPDATE":
+      console.log(action.payload);
+      return {
+        ...state,
+        costs: state.costs.map(cost =>
+          cost.id === action.payload.id
+            ? { ...cost, value: action.payload.value }
+            : cost
+        )
+      };
+
     default:
       return state;
   }

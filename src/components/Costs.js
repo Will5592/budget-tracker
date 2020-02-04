@@ -8,8 +8,6 @@ const Costs = props => {
   const { costs } = budgetContext;
   const { gridView } = props;
 
-  console.log(gridView);
-
   return (
     <div
       className={"cost-container" + (gridView ? " cost-container--grid" : "")}

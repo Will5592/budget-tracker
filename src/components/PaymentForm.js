@@ -22,6 +22,7 @@ const PaymentForm = () => {
 
   const onSubmit = e => {
     e.preventDefault();
+    cost.value = parseFloat(cost.value);
     addCost(cost);
     setCost({
       description: "",

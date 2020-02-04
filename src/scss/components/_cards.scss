@@ -79,19 +79,7 @@
   .cost__delete {
     height: 20px;
     width: 20px;
-    .line {
-      background: $main-red;
-      height: 3px;
-      width: 20px;
-      position: absolute;
-      top: calc(50% - 1.5px);
-      right: 0;
-      transform: rotate(-45deg);
-
-      &:first-child {
-        transform: rotate(45deg);
-      }
-    }
+    background: url("../images/bin-icon.svg") no-repeat;
   }
 }
 
@@ -101,6 +89,7 @@
   .cancel {
     width: 20px;
     height: 20px;
+    padding: 5px;
     top: 1rem;
     right: 1.5rem;
   }

@@ -8,7 +8,8 @@ import {
   UPDATE_BALANCE,
   TOGGLE_INCOME_EDIT,
   INCOME_UPDATE,
-  TOGGLE_COST_EDIT
+  EDIT_COST_TOGGLE,
+  COST_UPDATE
 } from "./types";
 
 const BudgetState = props => {
@@ -16,27 +17,29 @@ const BudgetState = props => {
     costs: [
       {
         id: "1001",
-        description: "Mortgage",
+        description: "Example Cost: Mortgage",
         category: "Bills",
-        value: 505.3
+        value: 505.3,
+        editState: false
       },
       {
         id: "1002",
-        description: "Home Insurance",
+        description: "Example Cost: Home Insurance",
         category: "Insurance",
-        value: 12.35
+        value: 12.35,
+        editState: false
       },
       {
         id: "1003",
-        description: "Council Tax",
+        description: "Example Cost: Council Tax",
         category: "Other",
-        value: 147.0
+        value: 147.0,
+        editState: false
       }
     ],
     income: 2000,
     remainingBalance: 0,
-    editIncome: false,
-    editCost: false
+    editIncome: false
   };
 
   const [state, dispatch] = useReducer(budgetReducer, initialState);
@@ -62,8 +65,12 @@ const BudgetState = props => {
     dispatch({ type: INCOME_UPDATE, payload: val });
   };
 
-  const editCostToggle = () => {
-    dispatch({ type: TOGGLE_COST_EDIT });
+  const editCostToggle = id => {
+    dispatch({ type: EDIT_COST_TOGGLE, payload: id });
+  };
+
+  const costUpdate = (id, value) => {
+    dispatch({ type: COST_UPDATE, payload: { id: id, value: value } });
   };
 
   return (
@@ -75,13 +82,13 @@ const BudgetState = props => {
         darkMode: state.darkMode,
         gridView: state.gridView,
         editIncome: state.editIncome,
-        editCost: state.editCost,
         deleteCost,
         addCost,
         updateBalance,
         editIncomeToggle,
         incomeUpdate,
-        editCostToggle
+        editCostToggle,
+        costUpdate
       }}
     >
       {props.children}
