@@ -183,15 +183,18 @@
     padding: 1rem;
   }
 
-  .cost-container.cost-container--grid {
-    .card {
-    }
-  }
   .cost__title,
   .cost__value {
     font-size: 1.2rem;
   }
   .cost__title {
     margin-right: 5rem;
+  }
+}
+
+@media screen and ($min) {
+  .cost__title,
+  .cost__value {
+    font-size: 28px;
   }
 }

@@ -5,7 +5,15 @@ const PaymentForm = () => {
   const budgetContext = useContext(BudgetContext);
   const [cost, setCost] = useState({
     description: "",
+<<<<<<< HEAD
     category: "Bills",
+=======
+<<<<<<< HEAD
+    category: "Bills",
+=======
+    category: "Financial",
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
+>>>>>>> ff9efd92c49b09ffd2fda33c0c0c32f501151214
     value: ""
   });
 
@@ -26,7 +34,15 @@ const PaymentForm = () => {
     addCost(cost);
     setCost({
       description: "",
+<<<<<<< HEAD
       category: "Bills",
+=======
+<<<<<<< HEAD
+      category: "Bills",
+=======
+      category: "Financial",
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
+>>>>>>> ff9efd92c49b09ffd2fda33c0c0c32f501151214
       value: ""
     });
   };
