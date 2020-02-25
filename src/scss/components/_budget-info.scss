@@ -1,0 +1,99 @@
+.budget-info {
+  width: 100%;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 30px;
+}
+
+.card-info {
+  font-size: 18px;
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.card-income {
+  position: relative;
+}
+
+.edit,
+.accept,
+.cancel {
+  height: 25px;
+  width: 25px;
+  border: none;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background-size: 25px 25px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.edit {
+  background: transparent url("../images/edit-icon.svg") no-repeat center;
+}
+
+.accept {
+  margin-right: 35px;
+  background: transparent url("../images/accept-icon.svg") no-repeat center;
+}
+
+.cancel {
+  background: transparent url("../images/cancel-icon.svg") no-repeat center;
+}
+
+.income-input {
+  margin-right: 75px;
+  width: 100px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  border: none;
+  border-bottom: 1px solid rgba(#272727, 0.22);
+
+  &:focus {
+    margin-bottom: -10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid orange;
+    outline: none;
+  }
+}
+
+.card-income__income,
+.card-balance__balance {
+  font-size: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 0 !important;
+}
+
+.card-balance__balance {
+  color: $main-green;
+}
+
+.card-balance__balance--red {
+  color: $main-red;
+}
+
+@media screen and (max-width: $small) {
+  .card-income__income,
+  .card-balance__balance {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .budget-info {
+    margin-bottom: 1rem;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    .card {
+      margin-bottom: 0;
+    }
+  }
+}

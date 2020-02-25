@@ -1,0 +1,197 @@
+.card {
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(#000, 0.05);
+  background: #fff;
+  transition: background ease 0.3s;
+}
+
+.card-info__title {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 400;
+  color: $main-blue;
+  transition: color ease 0.3s;
+}
+
+// Cost Cards
+
+.card-cost {
+  min-height: 200px;
+  margin-bottom: 30px;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.cost__title {
+  margin-bottom: 1rem;
+  font-size: 40px;
+  color: #272727;
+}
+
+.cost__category {
+  font-size: 1.25rem;
+
+  &.bills {
+    color: $main-gold;
+  }
+
+  &.insurance {
+    color: $main-blue;
+  }
+
+  &.other {
+    color: $main-green;
+  }
+}
+
+.cost__value {
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+  color: $main-red;
+  font-size: 40px;
+}
+
+.cost__btns {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  color: red;
+  display: flex;
+  font-size: 20px;
+
+  .cost__edit,
+  .cost__delete {
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  .cost__edit {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background: url("../images/edit-icon.svg") no-repeat;
+    position: relative;
+  }
+
+  .cost__delete {
+    height: 20px;
+    width: 20px;
+    background: url("../images/bin-icon.svg") no-repeat;
+  }
+}
+
+.cost-edit-group {
+  .income-input,
+  .accept,
+  .cancel {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    top: 1rem;
+    right: 1.5rem;
+  }
+
+  .income-input {
+    height: 30px;
+    width: 100px;
+  }
+}
+
+// Grid View
+
+.cost-container.cost-container--grid {
+  display: flex;
+  flex-flow: row wrap;
+
+  .card {
+    width: 32%;
+    color: red;
+
+    &:not(:nth-of-type(3n + 3)) {
+      margin-right: 2%;
+    }
+
+    .cost__title {
+      padding-right: 2.5rem;
+      font-size: 22px;
+    }
+    .cost__value {
+      right: 2rem;
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: $medium) {
+  .cost__title,
+  .cost__value {
+    font-size: 2rem;
+  }
+
+  .cost-container.cost-container--grid {
+    justify-content: space-between;
+    .card {
+      width: 48.5%;
+      margin-right: 0 !important;
+
+      .cost__title {
+        margin-right: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .card {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 1rem;
+  }
+
+  .card-info__title {
+    font-size: 18px;
+  }
+
+  .card__info {
+    font-size: 1rem;
+  }
+
+  .cost-container.cost-container--grid {
+    .card {
+      width: 100%;
+      min-height: 150px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .cost__title,
+  .cost__value {
+    font-size: 1.5rem;
+  }
+
+  .cost__value {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: $small) {
+  .card-cost {
+    padding: 1rem;
+  }
+
+  .cost-container.cost-container--grid {
+    .card {
+    }
+  }
+  .cost__title,
+  .cost__value {
+    font-size: 1.2rem;
+  }
+  .cost__title {
+    margin-right: 5rem;
+  }
+}
