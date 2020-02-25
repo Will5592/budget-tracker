@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  height: 120px;
+  background: $main-blue;
+  color: $off-white;
+  transition: background ease 0.3s;
+}
+
+.header-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;
+  padding-left: 3.5rem;
+  background: url("../images/coins-icon.svg") no-repeat;
+  background-size: 45px 45px;
+  font-weight: 500;
+  font-size: 40px;
+
+  span {
+    font-weight: 800;
+  }
+}
+
+.header__dark-toggle {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  .slider {
+    width: 40px;
+    height: 20px;
+    margin-left: 12px;
+    border-radius: 20px;
+    border: 5px solid #eee;
+    background: #ccc;
+    position: relative;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  .checkmark {
+    height: 14px;
+    width: 14px;
+    background: $main-red;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    transition: all ease 0.125s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  input:checked ~ .checkmark {
+    left: calc(100% - 14px);
+    background: rgb(15, 15, 15);
+  }
+}
+
+.header__date {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: $small) {
+  .logo {
+    height: 35px;
+    padding-left: 2.5rem;
+    background-size: 35px 35px;
+    font-size: 28px;
+  }
+
+  .header__date {
+    font-size: 18px;
+  }
+}

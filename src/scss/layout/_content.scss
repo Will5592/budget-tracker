@@ -1,0 +1,28 @@
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.main-content {
+  padding: 2rem 0;
+  transition: background ease 0.3s;
+}
+
+@media screen and (max-width: $medium) {
+  .wrap {
+    padding: 0 75px;
+  }
+}
+
+@media screen and (max-width: $small) {
+  .wrap {
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: $min) {
+  .wrap {
+    padding: 0 20px;
+  }
+}
