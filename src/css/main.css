@@ -405,6 +405,7 @@ body {
     color: red; }
     .cost-container.cost-container--grid .card:not(:nth-of-type(3n + 3)) {
       margin-right: 2%; }
+<<<<<<< HEAD
     .cost-container.cost-container--grid .card .cost__title {
       padding-right: 2.5rem;
       font-size: 22px; }
@@ -458,6 +459,12 @@ body {
 
   .cost__title {
     margin-right: 5rem; } }
+=======
+    .cost-container.cost-container--grid .card .cost__title,
+    .cost-container.cost-container--grid .card .cost__value {
+      font-size: 28px; }
+
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
 .budget-info {
   width: 100%;
   margin-bottom: 30px;
@@ -525,6 +532,7 @@ body {
 .card-balance__balance--red {
   color: #ff4a3d; }
 
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .card-income__income,
   .card-balance__balance {
@@ -536,6 +544,8 @@ body {
     grid-gap: 1rem; }
     .budget-info .card {
       margin-bottom: 0; } }
+=======
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
 .add-payment-form {
   margin-bottom: 30px; }
   .add-payment-form .card {
@@ -602,12 +612,15 @@ body {
     .add-payment-form form .form__submit {
       grid-area: submit; }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1024px) {
   .add-payment-form form {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: " description description " " category cost " " submit submit "; }
     .add-payment-form form input[type="submit"] {
       width: 100%; } }
+=======
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
 .cost-toolbar {
   width: 100%;
   margin-bottom: 30px;
@@ -635,11 +648,14 @@ body {
       background: #2b5a61;
       color: #fff; }
 
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .cost-toolbar h3 {
     font-size: 2rem; }
   .cost-toolbar .view-toggle {
     display: none; } }
+=======
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
@@ -649,6 +665,7 @@ body {
   padding: 2rem 0;
   transition: background ease 0.3s; }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1024px) {
   .wrap {
     padding: 0 75px; } }
@@ -658,6 +675,8 @@ body {
 @media screen and (max-width: 480px) {
   .wrap {
     padding: 0 20px; } }
+=======
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
 .header {
   width: 100%;
   height: 120px;
@@ -721,6 +740,7 @@ body {
   font-size: 20px;
   font-weight: 500; }
 
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .logo {
     height: 35px;
@@ -730,6 +750,8 @@ body {
 
   .header__date {
     font-size: 18px; } }
+=======
+>>>>>>> c1d759e57d88e2db333b248975c1df7e12940a2e
 .header.dm-active {
   background: #333; }
 
