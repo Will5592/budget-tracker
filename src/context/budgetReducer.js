@@ -37,7 +37,6 @@ export default (state, action) => {
       };
 
     case "COST_UPDATE":
-      console.log(action.payload);
       return {
         ...state,
         costs: state.costs.map(cost =>

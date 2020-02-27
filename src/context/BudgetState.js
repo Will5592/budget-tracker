@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import BudgetContext from "./budgetContext";
 import budgetReducer from "./budgetReducer";
 import uuid from "react-uuid";
@@ -16,25 +16,18 @@ const BudgetState = props => {
   const initialState = {
     costs: [
       {
-        id: "1001",
         description: "Example Cost: Mortgage",
         category: "Bills",
         value: 505.3,
-        editState: false
+        editState: false,
+        id: "1001"
       },
       {
-        id: "1002",
         description: "Example Cost: Home Insurance",
         category: "Insurance",
         value: 12.35,
-        editState: false
-      },
-      {
-        id: "1003",
-        description: "Example Cost: Council Tax",
-        category: "Other",
-        value: 147.0,
-        editState: false
+        editState: false,
+        id: "1002"
       }
     ],
     income: 2000,
@@ -42,7 +35,16 @@ const BudgetState = props => {
     editIncome: false
   };
 
-  const [state, dispatch] = useReducer(budgetReducer, initialState);
+  // Init reducer with either local storage or 'initialState' as initial state
+  const [state, dispatch] = useReducer(budgetReducer, [], () => {
+    const localData = localStorage.getItem("budget-data");
+    return localData ? JSON.parse(localData) : initialState;
+  });
+
+  // Update Local Storage when 'state' changes
+  useEffect(() => {
+    localStorage.setItem("budget-data", JSON.stringify(state));
+  }, [state]);
 
   const addCost = cost => {
     cost.id = uuid();
