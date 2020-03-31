@@ -1,1 +1,1 @@
-Simple budget tracker app with LS support
+Simple budget tracker app with LS persistence
